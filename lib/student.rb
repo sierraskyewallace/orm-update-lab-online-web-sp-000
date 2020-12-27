@@ -11,11 +11,11 @@ class Student
     
     def self.create_table
       sql = <<-SQL 
-      
       CREATE TABLE (
       id PRIMARY KEY INTEGER, 
       name TEXT, 
       grade INTEGER)
       SQL
+      DB[:conn].execute(sql)
     end
 end
